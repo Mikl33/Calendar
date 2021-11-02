@@ -10,9 +10,11 @@ import android.widget.Button
 import android.widget.CalendarView
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mikle.calendarapplication.Model.UserNoteModel
 import com.mikle.calendarapplication.db.MyAdapter
 import com.mikle.calendarapplication.db.MyDbMAnager
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONObject
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -27,14 +29,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         init()
-       // val button = findViewById<Button>(R.id.button)
-        val calendarView = findViewById<CalendarView>(R.id.calendarView)
 
+        val calendarView = findViewById<CalendarView>(R.id.calendarView)
 
         calendarView.setOnDateChangeListener {view, year, month, dayOfMonth ->
             datePick =  "$dayOfMonth.${month + 1}.$year"
-
         }
+
+        val userList: ArrayList<UserNoteModel> = ArrayList()
+
+        try {
+
+            val obj = JSONObject(getJSONFromAssets()!!)
+
+            val userArray = obj.getJSONArray()
+        }
+
 
     }
 

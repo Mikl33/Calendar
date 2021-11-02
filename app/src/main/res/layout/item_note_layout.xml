@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/dataStart"
-        android:layout_width="117dp"
+        android:layout_width="85dp"
         android:layout_height="19dp"
-        android:layout_marginStart="1dp"
+        android:layout_marginStart="2dp"
         android:background="#9CC19D"
-        android:text="TextView"
+        android:text="время начала дела"
         android:textColor="@color/wtite_midell"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvID"
@@ -20,12 +20,12 @@
 
     <TextView
         android:id="@+id/dataFinish"
-        android:layout_width="129dp"
-        android:layout_height="0dp"
+        android:layout_width="85dp"
+        android:layout_height="19dp"
         android:layout_marginStart="4dp"
         android:background="#9CC19D"
         android:inputType="text"
-        android:text="TextView"
+        android:text="время окончания"
         android:textColor="#062201"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/dataStart"
@@ -49,25 +49,39 @@
 
     <TextView
         android:id="@+id/nameNoteTitle"
-        android:layout_width="144dp"
+        android:layout_width="100dp"
         android:layout_height="19dp"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
         android:background="#9CC19D"
-        android:text="TextView"
+        android:text="Название дела"
+        android:textColor="#004D40"
         app:layout_constraintBottom_toBottomOf="@+id/dataFinish"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dataFinish"
         app:layout_constraintTop_toTopOf="@+id/dataFinish"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvID"
-        android:layout_width="12dp"
+        android:layout_width="30dp"
         android:layout_height="19dp"
+        android:layout_marginStart="4dp"
         android:background="#A8C1A9"
+        android:text="__ID"
         app:layout_constraintBottom_toBottomOf="@+id/dataStart"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/dataStart"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-6dp" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/descriptions"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="8dp"
+        android:text="Описание"
+        app:layout_constraintBottom_toBottomOf="@+id/nameNoteTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameNoteTitle"
+        app:layout_constraintTop_toTopOf="@+id/nameNoteTitle"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
